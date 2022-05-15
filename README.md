@@ -2,4 +2,4 @@
 
 ## Learning django from this course
 
-[https://youtu.be/PtQiiknWUcI](URL "Django Course By Dennis Ivy from Traversy Media")
+[Django Course From Traversy Media By Dennis Ivy](https://youtu.be/PtQiiknWUcI)
