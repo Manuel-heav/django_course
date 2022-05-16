@@ -32,3 +32,15 @@ A python framework for Backend Development
 `python manage.py runserver`
 
 - this will start the server on http://127.0.0.1:8000
+
+- then run inside the studybud folder again
+
+`python manage.py startapp base`
+
+and it will create a folder called base inside the studybud folder
+
+then add 'base.apps.baseConfig' inside settings.py in the boilerplate
+
+# To set templates, create a templates folder inside the root directory
+
+# then include it in the settings.py folder in the in Templates and DIR part
