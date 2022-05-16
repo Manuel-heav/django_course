@@ -43,4 +43,4 @@ then add 'base.apps.baseConfig' inside settings.py in the boilerplate
 
 # To set templates, create a templates folder inside the root directory
 
-# then include it in the settings.py folder in the in Templates and DIR part
+# then include it in the settings.py folder in the in Templates and DIR part.
