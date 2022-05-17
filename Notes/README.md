@@ -48,3 +48,7 @@ then add 'base.apps.baseConfig' inside settings.py in the boilerplate
 # Data Models are mostly classes
 
 ![Model](model.jpg)
+
+Don't forget to do
+
+`python manage.py migrate`
