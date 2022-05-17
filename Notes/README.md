@@ -56,3 +56,8 @@ Don't forget to do
 then after creating your model, make sure to run the command
 
 `python manage.py makemigrations`
+
+and this command will create a 0001 migration file..and execute those new migrations
+with the command
+
+`python manage.py migrate`
