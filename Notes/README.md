@@ -68,3 +68,9 @@ and to create a user
 do
 
 `python manage.py createsuperuser`
+
+and whenever we are going to access the models data from our views.py
+
+use this snippet
+
+![Query Set](query.jpg)
