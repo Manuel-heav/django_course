@@ -52,3 +52,7 @@ then add 'base.apps.baseConfig' inside settings.py in the boilerplate
 Don't forget to do
 
 `python manage.py migrate`
+
+then after creating your model, make sure to run the command
+
+`python manage.py makemigrations`
