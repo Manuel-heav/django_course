@@ -61,3 +61,10 @@ and this command will create a 0001 migration file..and execute those new migrat
 with the command
 
 `python manage.py migrate`
+
+you can go to /admin once you created the model
+and to create a user
+
+do
+
+`python manage.py createsuperuser`
