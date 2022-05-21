@@ -20,7 +20,8 @@ class Room(models.Model):
     updated = models.DateTimeField(auto_now=True) #Updates everytime
     created = models.DateTimeField(auto_now_add=True) #It is just once, the first time it is created
 
-
+    class Meta:
+        ordering = ['-updated', '-created']
     def __str__(self):
         return self.name
 
