@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Room, topic
+from .models import Room, Topic
 from .forms import RoomForm
 
 # Create your views here.
@@ -12,7 +12,8 @@ from .forms import RoomForm
 # To make a get request function here
 # and this is the same as App.get
 def home(request):
-     rooms = Room.objects.all()
+     q = request.GET.get('q') if request.GET.get('q') != None else ''
+     rooms = Room.objects.filter(topic__name__icontains=q) #the i contains part can be starts with ends with or anything like that, working on search here, ayzon if you are confused lol
      topics = Topic.objects.all()
      context = {'rooms': rooms, 'topics': topics}
      return render(request, 'base/home.html',context)
