@@ -12,6 +12,8 @@ from .forms import RoomForm
 # ]
 # To make a get request function here
 # and this is the same as App.get
+
+
 def home(request):
      q = request.GET.get('q') if request.GET.get('q') != None else ''
      rooms = Room.objects.filter(
