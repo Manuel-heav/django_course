@@ -7,6 +7,15 @@
     <title>StudyBud</title>
   </head>
   <body>
-    {% include 'navbar.html'%} {% block content %} {% endblock %}
+    {% include 'navbar.html'%} 
+    
+    {% if messages %}
+    <ul class="messages">
+      {% for message in messages%}
+        <li{% if message.tags %} class="{{message.tags}}" {%end if%}>{{message}}</li>
+      {% endfor%}
+    </ul>
+
+    {% block content %} {% endblock %}
   </body>
 </html>
