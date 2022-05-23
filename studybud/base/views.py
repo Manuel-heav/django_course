@@ -20,7 +20,8 @@ def home(request):
           Q(description__icontains=q)
           ) #the i contains part can be starts with ends with or anything like that, working on search here, ayzon if you are confused lol
      topics = Topic.objects.all()
-     context = {'rooms': rooms, 'topics': topics}
+     room_count = rooms.count()
+     context = {'rooms': rooms, 'topics': topics, 'room_count': room_count}
      return render(request, 'base/home.html',context)
 
 def room(request,pk):
