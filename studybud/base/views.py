@@ -58,6 +58,7 @@ def registerPage(request):
                user = form.save(commit=False)
                user.username = user.username.lower()
                user.save()
+               login(request, user)
                return redirect('home')
      return render(request, 'base/login_register.html', {'form': form})
 
