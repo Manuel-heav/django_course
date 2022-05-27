@@ -18,7 +18,7 @@ from .forms import RoomForm
 # To make a get request function here
 # and this is the same as App.get
 def loginPage(request):
-
+     page = 'login'
      if request.user.is_authenticated:
           return redirect('home')
 
@@ -40,7 +40,7 @@ def loginPage(request):
                messages.error(request, 'Username OR password does not exist')
 
 
-     context = {}
+     context = {'page': page}
      return render(request, 'base/login_register.html',context)
 
 
@@ -48,6 +48,9 @@ def logoutUser(request):
      logout(request)
      return redirect('home')
 
+def registerPage(request):
+     page = 'register'
+     return render(request, 'base/login_register.html')
 
 def home(request):
      q = request.GET.get('q') if request.GET.get('q') != None else ''
