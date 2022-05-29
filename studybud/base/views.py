@@ -141,4 +141,4 @@ def deleteMessage(request, pk):
      if request.method == 'POST':
           message.delete()
           return redirect('home')
-     return render(request, 'base/delete.html', {'obj': room})
+     return render(request, 'base/delete.html', {'obj': message})
