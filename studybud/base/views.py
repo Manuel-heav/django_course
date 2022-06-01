@@ -74,7 +74,7 @@ def home(request):
           ) #the i contains part can be starts with ends with or anything like that, working on search here, ayzon if you are confused lol
      topics = Topic.objects.all()
      room_count = rooms.count()
-     room_messages = Message.objects.all()
+     room_messages = Message.objects.filter(Q(room__topic__name__icontains=q))
 
      context = {'rooms': rooms, 'topics': topics, 'room_count': room_count, 'room_messages': room_messages}
      return render(request, 'base/home.html',context)
