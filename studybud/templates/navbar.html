@@ -22,12 +22,6 @@
       </label>
     </form>
     <nav class="header__menu">
-      <!-- Not Logged In -->
-      <!-- <a href="/login.html">
-        <img src="./assets/avatar.svg" />
-        <p>Login</p>
-      </a> -->
-
       <!-- Logged In -->
 
       <div class="header__user">
@@ -35,7 +29,9 @@
           <div class="avatar avatar--medium active">
             <img src="https://randomuser.me/api/portraits/men/37.jpg" />
           </div>
-          <p>John Doe <span>@john_doe</span></p>
+          <p>
+            {{request.user.username}}<span>@{{request.user.username}}</span>
+          </p>
         </a>
         <button class="dropdown-button">
           <svg
@@ -50,6 +46,12 @@
           </svg>
         </button>
       </div>
+
+      <!-- Not Logged In -->
+      <!-- <a href="/login.html">
+        <img src="./assets/avatar.svg" />
+        <p>Login</p>
+      </a> -->
 
       <div class="dropdown-menu">
         <a href="settings.html" class="dropdown-link"
